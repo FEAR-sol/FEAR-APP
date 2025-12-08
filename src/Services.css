@@ -1,0 +1,186 @@
+.services-section {
+  position: relative;
+  z-index: 1;
+  padding: 5rem 2rem;
+  background: #181818;
+}
+
+.services-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.services-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #F1F5F9;
+  margin-bottom: 0.75rem;
+}
+
+.services-header p {
+  font-size: 1.125rem;
+  color: #94A3B8;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+}
+
+.service-phone {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.service-phone:hover {
+  transform: translateY(-8px);
+}
+
+.phone-frame {
+  position: relative;
+  width: 100%;
+  background: #1F1F1F;
+  border: 10px solid #2A2A2A;
+  border-radius: 36px;
+  padding: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.phone-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 28px;
+  background: #181818;
+  border-radius: 0 0 20px 20px;
+  z-index: 2;
+}
+
+.phone-screen {
+  position: relative;
+  background: linear-gradient(135deg, #181818 0%, #1a1a2e 100%);
+  border-radius: 26px;
+  padding: 2rem 1.5rem;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-app-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #2A2A2A;
+}
+
+.service-app-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #3A5A78 0%, #4a6a88 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(58, 90, 120, 0.3);
+}
+
+.service-app-title h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #F1F5F9;
+  margin-bottom: 0.25rem;
+}
+
+.service-app-title p {
+  font-size: 0.75rem;
+  color: #6B7280;
+}
+
+.service-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.feature-item {
+  background: rgba(31, 31, 31, 0.6);
+  border: 1px solid #2A2A2A;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  border-color: #3A5A78;
+  background: rgba(58, 90, 120, 0.1);
+  transform: translateX(4px);
+}
+
+.feature-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-icon {
+  font-size: 1.25rem;
+}
+
+.feature-item h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #F1F5F9;
+}
+
+.feature-item p {
+  font-size: 0.75rem;
+  color: #94A3B8;
+  line-height: 1.4;
+}
+
+.service-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: linear-gradient(135deg, #3A5A78 0%, #4a6a88 100%);
+  color: #F1F5F9;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(58, 90, 120, 0.4);
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .phone-screen {
+    min-height: 450px;
+    padding: 1.5rem 1rem;
+  }
+}

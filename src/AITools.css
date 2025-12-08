@@ -1,0 +1,136 @@
+.ai-tools-section {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 2rem;
+  background: #181818;
+  border-top: 1px solid #2A2A2A;
+  overflow: hidden;
+}
+
+.ai-tools-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.ai-tools-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.ai-tools-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #F1F5F9;
+}
+
+.ai-tools-header .highlight {
+  color: #3A5A78;
+}
+
+.tools-loop-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.tools-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 30s linear infinite;
+  will-change: transform;
+}
+
+.tools-track:hover {
+  animation-play-state: paused;
+}
+
+.tools-list {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 0.75rem;
+}
+
+.tool-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  background: #1F1F1F;
+  border: 1px solid #2A2A2A;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tool-badge:hover {
+  border-color: #3A5A78;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(58, 90, 120, 0.3);
+}
+
+.tool-icon {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tool-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #F1F5F9;
+  white-space: nowrap;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .ai-tools-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .ai-tools-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .tools-list {
+    gap: 1rem;
+  }
+  
+  .tool-badge {
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .tools-track {
+    animation-duration: 20s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tools-track {
+    animation: none;
+  }
+}
