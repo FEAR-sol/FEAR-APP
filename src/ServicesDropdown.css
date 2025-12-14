@@ -1,0 +1,127 @@
+.service-card-wrapper {
+  position: relative;
+}
+
+.services-dropdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(31, 31, 31, 0.98);
+  backdrop-filter: blur(20px);
+  border: 1px solid #2A2A2A;
+  border-radius: 16px;
+  padding: 1.5rem;
+  min-width: 500px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+}
+
+.service-card-wrapper:hover .services-dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.dropdown-section {
+  margin-bottom: 2rem;
+}
+
+.dropdown-section:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown-section h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #F1F5F9;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dropdown-section h3::before {
+  content: "●";
+  color: #3A5A78;
+  font-size: 0.75rem;
+}
+
+.what-you-get-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(58, 90, 120, 0.1);
+  border: 1px solid rgba(58, 90, 120, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  background: rgba(58, 90, 120, 0.2);
+  border-color: #3A5A78;
+  transform: translateX(4px);
+}
+
+.benefit-icon {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #3A5A78 0%, #4a6a88 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.benefit-text {
+  font-size: 0.875rem;
+  color: #F1F5F9;
+  font-weight: 500;
+}
+
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tool-badge {
+  padding: 0.5rem 1rem;
+  background: rgba(58, 90, 120, 0.15);
+  border: 1px solid rgba(58, 90, 120, 0.3);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: #3A5A78;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tool-badge:hover {
+  background: rgba(58, 90, 120, 0.3);
+  border-color: #3A5A78;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(58, 90, 120, 0.3);
+}
+
+.navbar-menu li {
+  position: relative;
+}
+
+.navbar-menu li:hover .services-dropdown {
+  opacity: 1;
+  visibility: visible;
+}

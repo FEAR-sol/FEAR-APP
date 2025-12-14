@@ -1,0 +1,268 @@
+.before-we-begin-section {
+  position: relative;
+  z-index: 1;
+  padding: 5rem 2rem;
+  background: #181818;
+}
+
+.before-we-begin-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.before-we-begin-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #F1F5F9;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.before-we-begin-title .highlight {
+  color: #3A5A78;
+}
+
+.before-we-begin-intro {
+  font-size: 1.125rem;
+  color: #94A3B8;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.terms-box {
+  background: rgba(31, 31, 31, 0.6);
+  border: 1px solid #2A2A2A;
+  border-radius: 24px;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  backdrop-filter: blur(10px);
+}
+
+.terms-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.term-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.term-icon {
+  font-size: 2rem;
+  color: #3A5A78;
+  margin-bottom: 0.5rem;
+}
+
+.term-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #F1F5F9;
+  margin: 0;
+}
+
+.term-description {
+  font-size: 0.9rem;
+  color: #94A3B8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.agreement-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  background: rgba(31, 31, 31, 0.6);
+  border: 1px solid #2A2A2A;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.checkbox-container:hover {
+  border-color: #3A5A78;
+  background: rgba(31, 31, 31, 0.8);
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #3A5A78;
+}
+
+.checkbox-label {
+  font-size: 1rem;
+  color: #F1F5F9;
+  user-select: none;
+}
+
+.continue-button {
+  --tooltip-height: 35px;
+  --tooltip-width: 150px;
+  --gap-between-tooltip-to-button: 18px;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 300px;
+  position: relative;
+  overflow: hidden;
+  height: 56px;
+}
+
+.continue-button::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: #F1F5F9;
+  font-size: 0.9rem;
+  color: #111;
+  border-radius: 0.5em;
+  line-height: var(--tooltip-height);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  z-index: 10;
+}
+
+.continue-button::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #F1F5F9;
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  z-index: 10;
+}
+
+.continue-button .button-wrapper {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  color: #fff;
+}
+
+.continue-button .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: top 0.5s ease;
+}
+
+.continue-button .icon {
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: top 0.5s ease;
+}
+
+.continue-button .icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.continue-button.active {
+  background: #3A5A78;
+  color: #F1F5F9;
+}
+
+.continue-button.active:hover {
+  background: #4a6a88;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(58, 90, 120, 0.4);
+}
+
+.continue-button.active:hover .text {
+  top: -100%;
+}
+
+.continue-button.active:hover .icon {
+  top: 0;
+}
+
+.continue-button.active:hover::before,
+.continue-button.active:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.continue-button.active:hover::after {
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.continue-button.active:hover::before {
+  bottom: calc(100% + var(--gap-between-tooltip-to-button));
+}
+
+.continue-button.disabled {
+  background: #2A2A2A;
+  color: #6B7280;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .before-we-begin-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .before-we-begin-title {
+    font-size: 2rem;
+  }
+
+  .before-we-begin-intro {
+    font-size: 1rem;
+  }
+
+  .terms-box {
+    padding: 2rem 1.5rem;
+  }
+
+  .terms-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .continue-button {
+    min-width: 100%;
+  }
+}

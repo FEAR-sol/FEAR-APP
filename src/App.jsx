@@ -4,8 +4,12 @@ import Navbar from './Navbar';
 import Hero from './Hero';
 import AITools from './AITools';
 import Services from './Services';
+import BeforeWeBegin from './BeforeWeBegin';
 import Projects from './Projects';
 import Testimonials from './Testimonials';
+import FAQ from './FAQ';
+import Contact from './Contact';
+import Footer from './Footer';
 import './App.css';
 
 function App() {
@@ -34,8 +38,12 @@ function App() {
         <Hero />
         <AITools />
         <Services />
+        <BeforeWeBegin />
         <Projects />
         <Testimonials />
+        <FAQ />
+        <Contact />
+        <Footer />
       </div>
     </ClickSpark>
   );

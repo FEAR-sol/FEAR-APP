@@ -123,21 +123,91 @@
 }
 
 .hero-cta {
-  padding: 1rem 2.5rem;
-  background: #3A5A78;
-  color: #F1F5F9;
-  border: none;
-  border-radius: 50px;
-  font-size: 1.125rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
   font-weight: 600;
+  color: #3A5A78;
+  box-shadow: 0 0 0 2px #3A5A78;
   cursor: pointer;
-  transition: all 0.3s ease;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hero-cta svg {
+  position: absolute;
+  width: 24px;
+  fill: #3A5A78;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hero-cta .arr-1 {
+  right: 16px;
+}
+
+.hero-cta .arr-2 {
+  left: -25%;
+}
+
+.hero-cta .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #3A5A78;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hero-cta .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .hero-cta:hover {
-  background: #4a6a88;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(58, 90, 120, 0.3);
+  box-shadow: 0 0 0 12px transparent;
+  color: #F1F5F9;
+  border-radius: 12px;
+}
+
+.hero-cta:hover .arr-1 {
+  right: -25%;
+}
+
+.hero-cta:hover .arr-2 {
+  left: 16px;
+}
+
+.hero-cta:hover .text {
+  transform: translateX(12px);
+}
+
+.hero-cta:hover svg {
+  fill: #F1F5F9;
+}
+
+.hero-cta:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px #3A5A78;
+}
+
+.hero-cta:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
