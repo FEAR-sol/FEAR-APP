@@ -11,9 +11,9 @@
 }
 
 .navbar-scrolled {
-  background: rgba(24, 24, 24, 0.8);
+  background: rgba(14, 20, 27, 0.8);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(42, 42, 42, 0.5);
+  border-bottom: 1px solid rgba(31, 41, 55, 0.5);
 }
 
 .navbar-container {
@@ -26,10 +26,28 @@
 }
 
 .navbar-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo-img {
+  height: 100px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+.navbar-logo:hover .navbar-logo-img {
+  transform: scale(1.05);
+}
+
+.navbar-logo-text {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #3A5A78;
-  text-decoration: none;
+  background: linear-gradient(135deg, #22C55E 0%, #14B8A6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .navbar-menu {
@@ -42,7 +60,7 @@
 }
 
 .navbar-menu a {
-  color: #94A3B8;
+  color: #AEB6C2;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -57,12 +75,12 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #3A5A78;
+  background: #3B82F6;
   transition: width 0.3s ease;
 }
 
 .navbar-menu a:hover {
-  color: #3A5A78;
+  color: #3B82F6;
 }
 
 .navbar-menu a:hover::after {
@@ -81,8 +99,8 @@
   background-color: inherit;
   border-radius: 100px;
   font-weight: 600;
-  color: #3A5A78;
-  box-shadow: 0 0 0 2px #3A5A78;
+  color: #22C55E;
+  box-shadow: 0 0 0 2px #22C55E;
   cursor: pointer;
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
@@ -91,7 +109,7 @@
 .navbar-cta svg {
   position: absolute;
   width: 20px;
-  fill: #3A5A78;
+  fill: #22C55E;
   z-index: 9;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -111,7 +129,7 @@
   transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
-  background-color: #3A5A78;
+  background: linear-gradient(135deg, #22C55E 0%, #14B8A6 100%);
   border-radius: 50%;
   opacity: 0;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -126,7 +144,7 @@
 
 .navbar-cta:hover {
   box-shadow: 0 0 0 12px transparent;
-  color: #F1F5F9;
+  color: #0E141B;
   border-radius: 12px;
 }
 
@@ -143,12 +161,12 @@
 }
 
 .navbar-cta:hover svg {
-  fill: #F1F5F9;
+  fill: #0E141B;
 }
 
 .navbar-cta:active {
   scale: 0.95;
-  box-shadow: 0 0 0 4px #3A5A78;
+  box-shadow: 0 0 0 4px #22C55E;
 }
 
 .navbar-cta:hover .circle {

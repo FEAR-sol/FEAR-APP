@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
@@ -7,6 +8,8 @@ const Contact = () => {
     email: '',
     description: ''
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState('');
 
   const handleChange = (e) => {
     setFormData({
@@ -15,10 +18,40 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    setIsLoading(true);
+    setMessage('');
+
+    try {
+      // EmailJS configuration from environment variables
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      // Check if all required environment variables are set
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration is missing. Please check your environment variables.');
+      }
+
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        to_email: 'contact@fear.in',
+        message: formData.description,
+        subject: `New Contact Form Submission from ${formData.name}`
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      setMessage('Message sent successfully! We\'ll get back to you within 24 hours.');
+      setFormData({ name: '', email: '', description: '' });
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setMessage('Failed to send message. Please try again or contact us directly at fear.agency.contact@gmail.com');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -40,7 +73,7 @@ const Contact = () => {
                 <div className="contact-icon">✉️</div>
                 <div>
                   <div className="contact-label">Email</div>
-                  <div className="contact-value">contact@fear.in</div>
+                  <div className="contact-value">fear.agency.contact@gmail.com</div>
                 </div>
               </div>
 
@@ -77,6 +110,12 @@ const Contact = () => {
 
           <div className="contact-form-wrapper">
             <form className="contact-form" onSubmit={handleSubmit}>
+              {message && (
+                <div className={`form-message ${message.includes('successfully') ? 'success' : 'error'}`}>
+                  {message}
+                </div>
+              )}
+              
               <div className="form-group">
                 <label htmlFor="name">Your Name</label>
                 <input
@@ -87,6 +126,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  disabled={isLoading}
                 />
               </div>
 
@@ -100,6 +140,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  disabled={isLoading}
                 />
               </div>
 
@@ -113,17 +154,27 @@ const Contact = () => {
                   value={formData.description}
                   onChange={handleChange}
                   required
+                  disabled={isLoading}
                 ></textarea>
               </div>
 
-              <button type="submit" className="submit-button">
+              <button type="submit" className="submit-button" disabled={isLoading}>
                 <div className="svg-wrapper">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="22" y1="2" x2="11" y2="13"></line>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                  </svg>
+                  {isLoading ? (
+                    <svg className="loading-spinner" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none" strokeDasharray="31.416" strokeDashoffset="31.416">
+                        <animate attributeName="stroke-dasharray" dur="2s" values="0 31.416;15.708 15.708;0 31.416" repeatCount="indefinite"/>
+                        <animate attributeName="stroke-dashoffset" dur="2s" values="0;-15.708;-31.416" repeatCount="indefinite"/>
+                      </circle>
+                    </svg>
+                  ) : (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="22" y1="2" x2="11" y2="13"></line>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                  )}
                 </div>
-                <span>Send Message</span>
+                <span>{isLoading ? 'Sending...' : 'Send Message'}</span>
               </button>
             </form>
           </div>

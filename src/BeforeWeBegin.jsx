@@ -43,7 +43,7 @@ const BeforeWeBegin = () => {
           <div className="terms-grid">
             {terms.map((term, index) => (
               <div key={index} className="term-card">
-                <div className="term-icon">{term.icon}</div>
+                <div className={`term-icon ${term.icon === '✓' ? 'tick-icon' : ''}`}>{term.icon}</div>
                 <h3 className="term-title">{term.title}</h3>
                 <p className="term-description">{term.description}</p>
               </div>

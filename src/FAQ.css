@@ -2,7 +2,7 @@
   position: relative;
   z-index: 1;
   padding: 5rem 2rem;
-  background: #2A2A2A;
+  background: #0E141B;
 }
 
 .faq-container {
@@ -18,17 +18,20 @@
 .faq-header h2 {
   font-size: 3rem;
   font-weight: 700;
-  color: #F1F5F9;
+  color: #EAECEF;
   margin-bottom: 0.75rem;
 }
 
 .faq-header .highlight {
-  color: #3A5A78;
+  background: linear-gradient(135deg, #22C55E 0%, #14B8A6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .faq-header p {
   font-size: 1.125rem;
-  color: #94A3B8;
+  color: #AEB6C2;
 }
 
 .faq-list {
@@ -39,20 +42,20 @@
 }
 
 .faq-item {
-  background: rgba(31, 31, 31, 0.6);
-  border: 1px solid #2A2A2A;
+  background: #151C26;
+  border: 1px solid #1F2937;
   border-radius: 16px;
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
 .faq-item:hover {
-  border-color: #3A5A78;
+  border-color: #3B82F6;
 }
 
 .faq-item.active {
-  border-color: #3A5A78;
-  background: rgba(31, 31, 31, 0.8);
+  border-color: #3B82F6;
+  background: #151C26;
 }
 
 .faq-question {
@@ -63,7 +66,7 @@
   padding: 1.5rem 2rem;
   background: transparent;
   border: none;
-  color: #F1F5F9;
+  color: #EAECEF;
   font-size: 1.125rem;
   font-weight: 500;
   text-align: left;
@@ -72,12 +75,12 @@
 }
 
 .faq-question:hover {
-  color: #3A5A78;
+  color: #3B82F6;
 }
 
 .faq-icon {
   font-size: 1.5rem;
-  color: #3A5A78;
+  color: #3B82F6;
   font-weight: 300;
   transition: transform 0.3s ease;
   flex-shrink: 0;
@@ -102,21 +105,21 @@
 .faq-answer p {
   font-size: 1rem;
   line-height: 1.7;
-  color: #94A3B8;
+  color: #AEB6C2;
   margin: 0;
 }
 
 .faq-cta {
   text-align: center;
   padding: 3rem 2rem;
-  background: rgba(31, 31, 31, 0.6);
-  border: 1px solid #2A2A2A;
+  background: #151C26;
+  border: 1px solid #1F2937;
   border-radius: 16px;
 }
 
 .faq-cta p {
   font-size: 1.25rem;
-  color: #F1F5F9;
+  color: #EAECEF;
   margin-bottom: 1.5rem;
 }
 
@@ -132,8 +135,8 @@
   background-color: inherit;
   border-radius: 100px;
   font-weight: 600;
-  color: #3A5A78;
-  box-shadow: 0 0 0 2px #3A5A78;
+  color: #22C55E;
+  box-shadow: 0 0 0 2px #22C55E;
   cursor: pointer;
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
@@ -142,7 +145,7 @@
 .contact-button svg {
   position: absolute;
   width: 24px;
-  fill: #3A5A78;
+  fill: #22C55E;
   z-index: 9;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -162,7 +165,7 @@
   transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
-  background-color: #3A5A78;
+  background: linear-gradient(135deg, #22C55E 0%, #14B8A6 100%);
   border-radius: 50%;
   opacity: 0;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -177,7 +180,7 @@
 
 .contact-button:hover {
   box-shadow: 0 0 0 12px transparent;
-  color: #F1F5F9;
+  color: #0E141B;
   border-radius: 12px;
 }
 
@@ -194,12 +197,12 @@
 }
 
 .contact-button:hover svg {
-  fill: #F1F5F9;
+  fill: #0E141B;
 }
 
 .contact-button:active {
   scale: 0.95;
-  box-shadow: 0 0 0 4px #3A5A78;
+  box-shadow: 0 0 0 4px #22C55E;
 }
 
 .contact-button:hover .circle {

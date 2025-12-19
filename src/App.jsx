@@ -15,7 +15,7 @@ import './App.css';
 function App() {
   return (
     <ClickSpark
-      sparkColor='#3A5A78'
+      sparkColor='#3B82F6'
       sparkSize={12}
       sparkRadius={20}
       sparkCount={8}
@@ -25,8 +25,8 @@ function App() {
         <DotGrid
           dotSize={5}
           gap={20}
-          baseColor="#1a1a2e"
-          activeColor="#3A5A78"
+          baseColor="#1F2937"
+          activeColor="#3B82F6"
           proximity={180}
           shockRadius={250}
           shockStrength={5}

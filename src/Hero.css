@@ -16,30 +16,39 @@
 .hero-title {
   font-size: 4rem;
   font-weight: 700;
-  color: #F1F5F9;
+  color: #EAECEF;
   line-height: 1.2;
   margin-bottom: 1.5rem;
 }
 
 .text-accent {
-  color: #3A5A78;
+  background: linear-gradient(135deg, #22C55E 0%, #14B8A6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
-  color: #3A5A78;
+  background: linear-gradient(135deg, #22C55E 0%, #14B8A6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 1.5rem;
   font-weight: 600;
 }
 
 .subtitle-brand {
-  color: #3A5A78;
+  background: linear-gradient(135deg, #22C55E 0%, #14B8A6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-weight: 700;
 }
 
 .hero-description {
   font-size: 1.25rem;
-  color: #94A3B8;
+  color: #AEB6C2;
   line-height: 1.6;
   margin-bottom: 2.5rem;
   max-width: 800px;
@@ -60,19 +69,19 @@
   align-items: center;
   gap: 0.75rem;
   padding: 0.875rem 1.75rem;
-  background: rgba(31, 31, 31, 0.6);
-  border: 1px solid rgba(58, 90, 120, 0.3);
+  background: #151C26;
+  border: 1px solid #1F2937;
   border-radius: 50px;
   font-size: 0.875rem;
-  color: #F1F5F9;
+  color: #EAECEF;
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 15px rgba(58, 90, 120, 0.1);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
   transition: all 0.3s ease;
 }
 
 .badge:hover {
-  border-color: #3A5A78;
-  box-shadow: 0 4px 20px rgba(58, 90, 120, 0.3);
+  border-color: #3B82F6;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
   transform: translateY(-2px);
 }
 
@@ -81,45 +90,45 @@
 }
 
 .badge-yellow {
-  border-color: rgba(234, 179, 8, 0.3);
-  box-shadow: 0 4px 15px rgba(234, 179, 8, 0.15);
+  border-color: rgba(34, 197, 94, 0.3);
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.15);
 }
 
 .badge-yellow:hover {
-  border-color: rgba(234, 179, 8, 0.6);
-  box-shadow: 0 4px 20px rgba(234, 179, 8, 0.3);
+  border-color: rgba(34, 197, 94, 0.6);
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.3);
 }
 
 .badge-yellow .badge-icon {
-  filter: drop-shadow(0 0 8px rgba(234, 179, 8, 0.8));
+  filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.8));
 }
 
 .badge-purple {
-  border-color: rgba(168, 85, 247, 0.3);
-  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.15);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.15);
 }
 
 .badge-purple:hover {
-  border-color: rgba(168, 85, 247, 0.6);
-  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.3);
+  border-color: rgba(59, 130, 246, 0.6);
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
 }
 
 .badge-purple .badge-icon {
-  filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.8));
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.8));
 }
 
 .badge-cyan {
-  border-color: rgba(6, 182, 212, 0.3);
-  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.15);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.15);
 }
 
 .badge-cyan:hover {
-  border-color: rgba(6, 182, 212, 0.6);
-  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.3);
+  border-color: rgba(59, 130, 246, 0.6);
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
 }
 
 .badge-cyan .badge-icon {
-  filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.8));
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.8));
 }
 
 .hero-cta {
@@ -134,8 +143,8 @@
   background-color: inherit;
   border-radius: 100px;
   font-weight: 600;
-  color: #3A5A78;
-  box-shadow: 0 0 0 2px #3A5A78;
+  color: #22C55E;
+  box-shadow: 0 0 0 2px #22C55E;
   cursor: pointer;
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
@@ -144,7 +153,7 @@
 .hero-cta svg {
   position: absolute;
   width: 24px;
-  fill: #3A5A78;
+  fill: #22C55E;
   z-index: 9;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -164,7 +173,7 @@
   transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
-  background-color: #3A5A78;
+  background: linear-gradient(135deg, #22C55E 0%, #14B8A6 100%);
   border-radius: 50%;
   opacity: 0;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -179,7 +188,7 @@
 
 .hero-cta:hover {
   box-shadow: 0 0 0 12px transparent;
-  color: #F1F5F9;
+  color: #0E141B;
   border-radius: 12px;
 }
 
@@ -196,12 +205,12 @@
 }
 
 .hero-cta:hover svg {
-  fill: #F1F5F9;
+  fill: #0E141B;
 }
 
 .hero-cta:active {
   scale: 0.95;
-  box-shadow: 0 0 0 4px #3A5A78;
+  box-shadow: 0 0 0 4px #22C55E;
 }
 
 .hero-cta:hover .circle {

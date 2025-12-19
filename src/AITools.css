@@ -2,8 +2,8 @@
   position: relative;
   z-index: 1;
   padding: 4rem 2rem;
-  background: #181818;
-  border-top: 1px solid #2A2A2A;
+  background: #0E141B;
+  border-top: 1px solid #1F2937;
   overflow: hidden;
 }
 
@@ -20,11 +20,14 @@
 .ai-tools-header h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #F1F5F9;
+  color: #EAECEF;
 }
 
 .ai-tools-header .highlight {
-  color: #3A5A78;
+  background: linear-gradient(135deg, #22C55E 0%, #14B8A6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .tools-loop-wrapper {
@@ -69,8 +72,8 @@
   align-items: center;
   gap: 0.75rem;
   padding: 0.875rem 1.75rem;
-  background: #1F1F1F;
-  border: 1px solid #2A2A2A;
+  background: #151C26;
+  border: 1px solid #1F2937;
   border-radius: 50px;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -79,9 +82,9 @@
 }
 
 .tool-badge:hover {
-  border-color: #3A5A78;
+  border-color: #3B82F6;
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(58, 90, 120, 0.3);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
 .tool-icon {
@@ -94,7 +97,7 @@
 .tool-name {
   font-size: 1rem;
   font-weight: 500;
-  color: #F1F5F9;
+  color: #EAECEF;
   white-space: nowrap;
 }
 

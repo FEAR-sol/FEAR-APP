@@ -2,7 +2,7 @@
   position: relative;
   z-index: 1;
   padding: 5rem 2rem;
-  background: #181818;
+  background: #0E141B;
 }
 
 .projects-container {
@@ -18,13 +18,13 @@
 .projects-header h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #F1F5F9;
+  color: #EAECEF;
   margin-bottom: 0.75rem;
 }
 
 .projects-header p {
   font-size: 1.125rem;
-  color: #94A3B8;
+  color: #AEB6C2;
 }
 
 .projects-grid {
@@ -51,8 +51,8 @@
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
-  background: #1F1F1F;
-  border: 8px solid #2A2A2A;
+  background: #151C26;
+  border: 8px solid #1F2937;
   border-radius: 32px;
   padding: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
@@ -65,7 +65,7 @@
   transform: translateX(-50%);
   width: 120px;
   height: 24px;
-  background: #181818;
+  background: #0E141B;
   border-radius: 0 0 16px 16px;
   z-index: 1;
 }
@@ -83,13 +83,13 @@
 .project-info h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #F1F5F9;
+  color: #EAECEF;
   margin-bottom: 0.5rem;
 }
 
 .project-info p {
   font-size: 0.875rem;
-  color: #6B7280;
+  color: #AEB6C2;
 }
 
 .project-modal {
@@ -108,8 +108,8 @@
 }
 
 .modal-content {
-  background: #1F1F1F;
-  border: 1px solid #2A2A2A;
+  background: #151C26;
+  border: 1px solid #1F2937;
   border-radius: 16px;
   padding: 2rem;
   max-width: 1200px;
@@ -123,7 +123,7 @@
   right: 1rem;
   background: transparent;
   border: none;
-  color: #94A3B8;
+  color: #9CA3AF;
   font-size: 2rem;
   cursor: pointer;
   width: 40px;
@@ -136,20 +136,20 @@
 }
 
 .modal-close:hover {
-  background: #2A2A2A;
-  color: #F1F5F9;
+  background: #1F2937;
+  color: #EAECEF;
 }
 
 .modal-content h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #F1F5F9;
+  color: #EAECEF;
   margin-bottom: 0.5rem;
 }
 
 .modal-description {
   font-size: 1.125rem;
-  color: #94A3B8;
+  color: #AEB6C2;
   margin-bottom: 2rem;
 }
 
@@ -174,7 +174,7 @@
 .detail-section h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #F1F5F9;
+  color: #EAECEF;
   margin-bottom: 1rem;
 }
 
@@ -186,10 +186,10 @@
 
 .tech-tag {
   padding: 0.5rem 1rem;
-  background: #181818;
-  border: 1px solid #3A5A78;
+  background: #151C26;
+  border: 1px solid #3B82F6;
   border-radius: 50px;
-  color: #3A5A78;
+  color: #3B82F6;
   font-size: 0.875rem;
   font-weight: 500;
 }
@@ -201,8 +201,8 @@
 
 .features-list li {
   padding: 0.75rem 0;
-  color: #94A3B8;
-  border-bottom: 1px solid #2A2A2A;
+  color: #AEB6C2;
+  border-bottom: 1px solid #1F2937;
 }
 
 .features-list li:last-child {
@@ -211,7 +211,7 @@
 
 .features-list li::before {
   content: "✓ ";
-  color: #3A5A78;
+  color: #22C55E;
   font-weight: bold;
   margin-right: 0.5rem;
 }
