@@ -4,42 +4,45 @@ import './Projects.css';
 const projects = [
   {
     id: 1,
-    name: "E-Commerce App",
-    description: "Modern shopping experience",
-    preview: "https://via.placeholder.com/300x600/3A5A78/F1F5F9?text=E-Commerce+App",
+    name: "Bangalore Bites",
+    description: "Food delivery platform",
+    preview: "/bangalorebites.jpeg",
+    website: "https://bangalorebites.in",
     screens: [
-      "https://via.placeholder.com/300x600/3A5A78/F1F5F9?text=Home",
-      "https://via.placeholder.com/300x600/3A5A78/F1F5F9?text=Products",
-      "https://via.placeholder.com/300x600/3A5A78/F1F5F9?text=Cart"
+      "/bangalorebites.jpeg",
+      "/bangalorebites.jpeg",
+      "/bangalorebites.jpeg"
     ],
-    tech: ["React Native", "Node.js", "MongoDB"],
-    features: ["Product catalog", "Shopping cart", "Payment integration", "Order tracking"]
+    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+    features: ["Restaurant listings", "Real-time order tracking", "Multiple payment options", "User reviews & ratings"]
   },
   {
     id: 2,
-    name: "Fitness Tracker",
-    description: "Track your health goals",
-    preview: "https://via.placeholder.com/300x600/3A5A78/F1F5F9?text=Fitness+Tracker",
+    name: "Glamour Beauty",
+    description: "Beauty & wellness booking",
+    preview: "/glamour.jpeg",
+    website: "https://glamourbeauty.in",
     screens: [
-      "https://via.placeholder.com/300x600/3A5A78/F1F5F9?text=Dashboard",
-      "https://via.placeholder.com/300x600/3A5A78/F1F5F9?text=Workouts",
-      "https://via.placeholder.com/300x600/3A5A78/F1F5F9?text=Stats"
+      "/glamour.jpeg",
+      "/glamour.jpeg",
+      "/glamour.jpeg"
     ],
-    tech: ["Flutter", "Firebase", "HealthKit"],
-    features: ["Workout tracking", "Calorie counter", "Progress charts", "Social sharing"]
+    tech: ["React", "Firebase", "Stripe", "Google Maps API"],
+    features: ["Service booking", "Appointment scheduling", "Payment integration", "Location-based search"]
   },
   {
     id: 3,
-    name: "Food Delivery",
-    description: "Order food in minutes",
-    preview: "https://via.placeholder.com/300x600/3A5A78/F1F5F9?text=Food+Delivery",
+    name: "Oneness Yoga",
+    description: "Yoga & meditation platform",
+    preview: "/onenessyoga.jpeg",
+    website: "https://onenessyoga.in",
     screens: [
-      "https://via.placeholder.com/300x600/3A5A78/F1F5F9?text=Restaurants",
-      "https://via.placeholder.com/300x600/3A5A78/F1F5F9?text=Menu",
-      "https://via.placeholder.com/300x600/3A5A78/F1F5F9?text=Checkout"
+      "/onenessyoga.jpeg",
+      "/onenessyoga.jpeg",
+      "/onenessyoga.jpeg"
     ],
-    tech: ["React Native", "Express", "PostgreSQL"],
-    features: ["Restaurant search", "Real-time tracking", "Multiple payments", "Reviews & ratings"]
+    tech: ["React", "Node.js", "PostgreSQL", "Video Streaming"],
+    features: ["Live yoga classes", "On-demand videos", "Progress tracking", "Community features"]
   }
 ];
 
@@ -114,6 +117,21 @@ const Projects = () => {
                 </ul>
               </div>
             </div>
+
+            <a 
+              href={selectedProject.website} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="visit-website-btn"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <span>Visit Website</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
           </div>
         </div>
       )}

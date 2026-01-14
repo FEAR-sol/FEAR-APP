@@ -216,6 +216,37 @@
   margin-right: 0.5rem;
 }
 
+.visit-website-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  background: linear-gradient(135deg, #22C55E 0%, #14B8A6 100%);
+  color: #0E141B;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+}
+
+.visit-website-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.5);
+  background: #3B82F6;
+  color: #EAECEF;
+}
+
+.visit-website-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.visit-website-btn:hover svg {
+  transform: translate(2px, -2px);
+}
+
 @media (max-width: 768px) {
   .projects-section {
     padding: 3rem 1.5rem;
@@ -228,5 +259,10 @@
   .modal-screens {
     flex-direction: column;
     align-items: center;
+  }
+
+  .visit-website-btn {
+    width: 100%;
+    justify-content: center;
   }
 }
