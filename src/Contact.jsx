@@ -94,20 +94,9 @@ const Contact = () => {
             <div className="contact-details">
               <div className="contact-item hover-lift">
                 <div className="contact-icon animate-pulse">✉️</div>
-                <div>
+                <div className="contact-text">
                   <div className="contact-label">Email</div>
                   <div className="contact-value">fear.agency.contact@gmail.com</div>
-                </div>
-              </div>
-
-              <div className="contact-item hover-lift">
-                <div className="contact-icon animate-pulse">📞</div>
-                <div>
-                  <div className="contact-label">Phone</div>
-                  <div className="contact-value">
-                    <div>+91 81256 44388</div>
-                    <div>+91 91087 53694</div>
-                  </div>
                 </div>
               </div>
             </div>
