@@ -3,6 +3,7 @@
   width: 100%;
   min-height: 100vh;
   background: #0E141B;
+  overflow-x: hidden;
 }
 
 .background {
@@ -64,6 +65,10 @@
   transition: all 0.3s ease;
   border: none;
   text-decoration: none;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-primary {
@@ -85,4 +90,162 @@
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.05);
   color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .content {
+    padding: 1.5rem;
+  }
+  
+  .content h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .content h1 {
+    font-size: 3rem;
+  }
+  
+  .buttons {
+    gap: 0.75rem;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.75rem;
+    font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem;
+  }
+  
+  .content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .badge {
+    padding: 0.4375rem 0.875rem;
+    font-size: 0.8125rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    gap: 0.75rem;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 0.75rem;
+  }
+  
+  .content h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .badge {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .buttons {
+    max-width: 280px;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .content {
+    padding: 0.5rem;
+  }
+  
+  .content h1 {
+    font-size: 1.75rem;
+  }
+  
+  .buttons {
+    max-width: 260px;
+  }
+  
+  .btn {
+    padding: 0.625rem 1rem;
+    font-size: 0.8125rem;
+  }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .badge {
+    font-size: 0.8125rem;
+    padding: 0.4375rem 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 1rem 0.75rem;
+  }
+  
+  .content h1 {
+    font-size: 2rem;
+  }
+  
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+  }
+  
+  .btn {
+    font-size: 0.9375rem;
+    padding: 0.875rem 1.5rem;
+  }
+}
+
+/* Prevent horizontal overflow */
+.app {
+  overflow-x: hidden;
 }

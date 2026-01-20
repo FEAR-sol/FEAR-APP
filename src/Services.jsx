@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import ServicesDropdown from './ServicesDropdown';
 import './Services.css';
 
@@ -54,20 +54,44 @@ const services = [
 
 const Services = () => {
   const [hoveredService, setHoveredService] = useState(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <section id="services" className="services-section">
+    <section id="services" className="services-section" ref={sectionRef}>
       <div className="services-container">
-        <div className="services-header">
+        <div className={`services-header fade-in-on-scroll ${isVisible ? 'animate' : ''}`}>
           <h2>Services</h2>
           <p>Comprehensive solutions for your mobile app needs</p>
         </div>
         
         <div className="services-grid">
-          {services.map((service) => (
+          {services.map((service, index) => (
             <div 
               key={service.id} 
-              className="card service-card-wrapper"
+              className={`card service-card-wrapper fade-in-on-scroll hover-lift ${isVisible ? 'animate' : ''}`}
+              style={{ animationDelay: `${index * 0.2}s` }}
               onMouseEnter={() => setHoveredService(service)}
               onMouseLeave={() => setHoveredService(null)}
             >
@@ -84,14 +108,14 @@ const Services = () => {
                 
                 <div className="hello">
                   <div className="service-title">
-                    <span className="service-icon">{service.icon}</span>
+                    <span className="service-icon animate-pulse">{service.icon}</span>
                     <span>{service.title}</span>
                   </div>
                   <div className="service-count">{service.subServices.length} Services</div>
                   
                   <div className="service-list">
-                    {service.subServices.map((sub, index) => (
-                      <div key={index} className="service-item">
+                    {service.subServices.map((sub, subIndex) => (
+                      <div key={subIndex} className="service-item">
                         <div className="service-item-header">
                           <span className="service-item-icon">{sub.icon}</span>
                           <span className="service-item-title">{sub.title}</span>
@@ -107,12 +131,12 @@ const Services = () => {
         </div>
 
         {hoveredService && (
-          <div className="service-details-box">
+          <div className="service-details-box animate-fade-in-up">
             <div className="details-left">
               <h3>What You Get</h3>
               <div className="benefits-list">
                 {hoveredService.subServices.map((benefit, index) => (
-                  <div key={index} className="benefit-item">
+                  <div key={index} className="benefit-item animate-fade-in-left" style={{ animationDelay: `${index * 0.1}s` }}>
                     <div className="benefit-icon">{benefit.icon}</div>
                     <span>{benefit.title}</span>
                   </div>
@@ -124,7 +148,7 @@ const Services = () => {
               <h3>Tools & Technologies</h3>
               <div className="tools-bubbles">
                 {hoveredService.tools.map((tool, index) => (
-                  <div key={index} className="bubble-tool">{tool}</div>
+                  <div key={index} className="bubble-tool animate-scale-in hover-scale" style={{ animationDelay: `${index * 0.1}s` }}>{tool}</div>
                 ))}
               </div>
             </div>

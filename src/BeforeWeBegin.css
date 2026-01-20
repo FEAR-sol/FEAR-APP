@@ -265,29 +265,315 @@
   opacity: 0.5;
 }
 
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .before-we-begin-section {
+    padding: 4rem 1.5rem;
+  }
+  
+  .before-we-begin-title {
+    font-size: 2.75rem;
+  }
+  
+  .terms-box {
+    padding: 2.5rem;
+  }
+  
+  .terms-grid {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .before-we-begin-section {
+    padding: 3.5rem 1.5rem;
+  }
+  
+  .before-we-begin-title {
+    font-size: 2.5rem;
+  }
+  
+  .before-we-begin-intro {
+    font-size: 1.0625rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .terms-box {
+    padding: 2.25rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .terms-grid {
+    gap: 1.75rem;
+  }
+  
+  .term-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.875rem;
+  }
+  
+  .term-title {
+    font-size: 1.0625rem;
+  }
+  
+  .term-description {
+    font-size: 0.875rem;
+  }
+}
+
 @media (max-width: 768px) {
   .before-we-begin-section {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1rem;
   }
 
   .before-we-begin-title {
     font-size: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
   }
 
   .before-we-begin-intro {
     font-size: 1rem;
+    margin-bottom: 2rem;
   }
 
   .terms-box {
     padding: 2rem 1.5rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
   }
 
   .terms-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
+  }
+  
+  .term-card {
+    gap: 0.625rem;
+  }
+  
+  .term-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 1.75rem;
+    margin-bottom: 0.375rem;
+  }
+  
+  .term-title {
+    font-size: 1rem;
+  }
+  
+  .term-description {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+  }
+  
+  .agreement-section {
+    gap: 1.25rem;
+  }
+  
+  .checkbox-container {
+    padding: 0.875rem 1.25rem;
+    gap: 0.625rem;
+    border-radius: 10px;
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .checkbox-label {
+    font-size: 0.9375rem;
+    line-height: 1.4;
   }
 
   .continue-button {
     min-width: 100%;
+    max-width: 100%;
+    padding: 0.875rem 2rem;
+    font-size: 0.9375rem;
+    height: 52px;
+  }
+  
+  .continue-button .icon svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .before-we-begin-section {
+    padding: 2.5rem 0.75rem;
+  }
+  
+  .before-we-begin-title {
+    font-size: 1.75rem;
+  }
+  
+  .before-we-begin-intro {
+    font-size: 0.9375rem;
+    padding: 0 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .terms-box {
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+  }
+  
+  .terms-grid {
+    gap: 1.25rem;
+  }
+  
+  .term-card {
+    gap: 0.5rem;
+  }
+  
+  .term-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .term-title {
+    font-size: 0.9375rem;
+  }
+  
+  .term-description {
+    font-size: 0.75rem;
+  }
+  
+  .agreement-section {
+    gap: 1rem;
+  }
+  
+  .checkbox-container {
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+    border-radius: 8px;
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .checkbox-label {
+    font-size: 0.875rem;
+  }
+  
+  .continue-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    height: 48px;
+    border-radius: 10px;
+  }
+  
+  .continue-button .icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .continue-button::before {
+    --tooltip-width: 130px;
+    --tooltip-height: 32px;
+    font-size: 0.8125rem;
+    line-height: var(--tooltip-height);
+  }
+}
+
+@media (max-width: 320px) {
+  .before-we-begin-section {
+    padding: 2rem 0.5rem;
+  }
+  
+  .before-we-begin-title {
+    font-size: 1.5rem;
+  }
+  
+  .before-we-begin-intro {
+    font-size: 0.875rem;
+  }
+  
+  .terms-box {
+    padding: 1.25rem 0.75rem;
+  }
+  
+  .term-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.375rem;
+  }
+  
+  .term-title {
+    font-size: 0.875rem;
+  }
+  
+  .term-description {
+    font-size: 0.6875rem;
+  }
+  
+  .checkbox-container {
+    padding: 0.625rem 0.875rem;
+  }
+  
+  .checkbox-label {
+    font-size: 0.8125rem;
+  }
+  
+  .continue-button {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.8125rem;
+    height: 44px;
+  }
+  
+  .continue-button::before {
+    --tooltip-width: 120px;
+    --tooltip-height: 30px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Landscape orientation for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .before-we-begin-section {
+    padding: 2rem 1rem;
+  }
+  
+  .before-we-begin-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .before-we-begin-intro {
+    margin-bottom: 1.5rem;
+  }
+  
+  .terms-box {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .terms-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  
+  .term-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.375rem;
+  }
+  
+  .agreement-section {
+    gap: 1rem;
+  }
+  
+  .continue-button {
+    height: 44px;
+    min-width: 250px;
   }
 }

@@ -247,14 +247,289 @@
   transform: translateY(-20px);
 }
 
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .services-section {
+    padding: 4rem 1.5rem;
+  }
+  
+  .services-grid {
+    gap: 3rem;
+  }
+  
+  .service-details-box {
+    padding: 2.5rem 3rem;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .services-section {
+    padding: 3.5rem 1.5rem;
+  }
+  
+  .services-header h2 {
+    font-size: 2.25rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+    gap: 2.5rem;
+  }
+  
+  .card {
+    width: 200px;
+    height: 380px;
+  }
+  
+  .service-details-box {
+    padding: 2rem;
+    gap: 3rem;
+  }
+}
+
 @media (max-width: 768px) {
   .services-section {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1rem;
+  }
+  
+  .services-header {
+    margin-bottom: 3rem;
+  }
+  
+  .services-header h2 {
+    font-size: 2rem;
+  }
+  
+  .services-header p {
+    font-size: 1rem;
   }
   
   .services-grid {
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: 2rem;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 300px;
+    height: 350px;
+  }
+  
+  .service-details-box {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .details-left h3,
+  .details-right h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .benefit-item {
+    font-size: 0.9375rem;
+  }
+  
+  .benefit-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.125rem;
+  }
+  
+  .bubble-tool {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+  
+  .before-we-begin {
+    margin-top: 4rem;
+    padding: 2rem 1rem;
+  }
+  
+  .before-we-begin h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-section {
+    padding: 2.5rem 0.75rem;
+  }
+  
+  .services-header h2 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+  
+  .services-header p {
+    font-size: 0.9375rem;
+    padding: 0 0.5rem;
+  }
+  
+  .services-grid {
+    gap: 1.5rem;
+  }
+  
+  .card {
+    max-width: 280px;
+    height: 320px;
+  }
+  
+  .hello {
+    padding: 1.5rem 0.75rem;
+  }
+  
+  .service-title {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .service-icon {
+    font-size: 1.25rem;
+  }
+  
+  .service-count {
+    font-size: 0.6875rem;
+    margin-bottom: 1rem;
+  }
+  
+  .service-list {
+    gap: 0.5rem;
+  }
+  
+  .service-item {
+    padding: 0.625rem;
+  }
+  
+  .service-item-title {
+    font-size: 0.6875rem;
+  }
+  
+  .service-item-desc {
+    font-size: 0.625rem;
+  }
+  
+  .service-details-box {
+    padding: 1.25rem;
+    gap: 1.5rem;
+  }
+  
+  .details-left h3,
+  .details-right h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .benefit-item {
+    font-size: 0.875rem;
+    gap: 1rem;
+  }
+  
+  .benefit-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+  
+  .tools-bubbles {
+    gap: 0.5rem;
+  }
+  
+  .bubble-tool {
+    padding: 0.4375rem 0.875rem;
+    font-size: 0.6875rem;
+  }
+  
+  .before-we-begin {
+    margin-top: 3rem;
+    padding: 1.5rem 0.75rem;
+  }
+  
+  .before-we-begin h2 {
+    font-size: 1.875rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .services-section {
+    padding: 2rem 0.5rem;
+  }
+  
+  .services-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .card {
+    max-width: 260px;
+    height: 300px;
+  }
+  
+  .hello {
+    padding: 1.25rem 0.625rem;
+  }
+  
+  .service-title {
+    font-size: 1rem;
+  }
+  
+  .service-details-box {
+    padding: 1rem;
+  }
+  
+  .benefit-item {
+    font-size: 0.8125rem;
+  }
+  
+  .bubble-tool {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.625rem;
+  }
+  
+  .before-we-begin h2 {
+    font-size: 1.625rem;
+  }
+}
+
+/* Landscape orientation for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .services-section {
+    padding: 2rem 1rem;
+  }
+  
+  .services-header {
+    margin-bottom: 2rem;
+  }
+  
+  .services-header h2 {
+    font-size: 1.75rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .card {
+    height: 280px;
+  }
+  
+  .service-details-box {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+  
+  .before-we-begin {
+    margin-top: 2rem;
+    padding: 1.5rem;
+  }
+  
+  .before-we-begin h2 {
+    font-size: 2rem;
   }
 }
 

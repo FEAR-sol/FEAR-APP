@@ -1,8 +1,31 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './FAQ.css';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   const faqs = [
     {
@@ -52,11 +75,11 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="faq-section">
+    <section id="faq" className="faq-section" ref={sectionRef}>
       <div className="faq-container">
-        <div className="faq-header">
+        <div className={`faq-header fade-in-on-scroll ${isVisible ? 'animate' : ''}`}>
           <h2>
-            Frequently Asked <span className="highlight">Questions</span>
+            Frequently Asked <span className="highlight animate-text-glow">Questions</span>
           </h2>
           <p>Everything you need to know about our services</p>
         </div>
@@ -65,14 +88,17 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div 
               key={index} 
-              className={`faq-item ${openIndex === index ? 'active' : ''}`}
+              className={`faq-item ${openIndex === index ? 'active' : ''} fade-in-on-scroll hover-lift ${isVisible ? 'animate' : ''}`}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <button 
-                className="faq-question"
+                className="faq-question hover-glow"
                 onClick={() => toggleFAQ(index)}
               >
                 <span>{faq.question}</span>
-                <span className="faq-icon">{openIndex === index ? '−' : '+'}</span>
+                <span className={`faq-icon animate-pulse ${openIndex === index ? 'rotate' : ''}`}>
+                  {openIndex === index ? '−' : '+'}
+                </span>
               </button>
               <div className={`faq-answer ${openIndex === index ? 'open' : ''}`}>
                 <p>{faq.answer}</p>
@@ -81,10 +107,10 @@ const FAQ = () => {
           ))}
         </div>
 
-        <div className="faq-cta">
+        <div className={`faq-cta fade-in-on-scroll ${isVisible ? 'animate' : ''}`} style={{animationDelay: '1s'}}>
           <p>Still have questions? We're here to help!</p>
           <button 
-            className="contact-button" 
+            className="contact-button hover-lift animate-pulse" 
             onClick={() => {
               const contactSection = document.getElementById('contact');
               if (contactSection) {

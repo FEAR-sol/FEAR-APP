@@ -3,7 +3,7 @@ import AITools from './AITools';
 import Services from './Services';
 import BeforeWeBegin from './BeforeWeBegin';
 import Projects from './Projects';
-import Testimonials from './Testimonials';
+
 import FAQ from './FAQ';
 
 const Home = () => {
@@ -14,7 +14,6 @@ const Home = () => {
       <Services />
       <BeforeWeBegin />
       <Projects />
-      <Testimonials />
       <FAQ />
     </>
   );

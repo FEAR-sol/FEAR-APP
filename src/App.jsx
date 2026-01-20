@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react';
+import LoadingPage from './LoadingPage';
 import DotGrid from './DotGrid';
 import ClickSpark from './ClickSpark';
 import Navbar from './Navbar';
@@ -6,13 +8,23 @@ import AITools from './AITools';
 import Services from './Services';
 import BeforeWeBegin from './BeforeWeBegin';
 import Projects from './Projects';
-import Testimonials from './Testimonials';
 import FAQ from './FAQ';
 import Contact from './Contact';
 import Footer from './Footer';
+import Chatbot from './Chatbot';
 import './App.css';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
+  if (isLoading) {
+    return <LoadingPage onLoadingComplete={handleLoadingComplete} />;
+  }
+
   return (
     <ClickSpark
       sparkColor='#3B82F6'
@@ -40,10 +52,10 @@ function App() {
         <Services />
         <BeforeWeBegin />
         <Projects />
-        <Testimonials />
         <FAQ />
         <Contact />
         <Footer />
+        <Chatbot />
       </div>
     </ClickSpark>
   );
