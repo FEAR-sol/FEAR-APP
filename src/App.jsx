@@ -50,8 +50,8 @@ function App() {
         <Hero />
         <AITools />
         <Services />
-        <BeforeWeBegin />
         <Projects />
+        <BeforeWeBegin />
         <FAQ />
         <Contact />
         <Footer />
