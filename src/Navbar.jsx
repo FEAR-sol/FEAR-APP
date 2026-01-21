@@ -145,7 +145,7 @@ const Navbar = () => {
             <li><a href="#projects" onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }} tabIndex={isMobileMenuOpen ? 0 : -1}>Projects</a></li>
             <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} tabIndex={isMobileMenuOpen ? 0 : -1}>Contact</a></li>
             <li>
-              <a href="https://fear-main.netlify.app/" className="mobile-cta" tabIndex={isMobileMenuOpen ? 0 : -1}>
+              <a href="https://www.fearagency.in/" className="mobile-cta" tabIndex={isMobileMenuOpen ? 0 : -1}>
                 Back to Home
               </a>
             </li>
